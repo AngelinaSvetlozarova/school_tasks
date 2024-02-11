@@ -1,0 +1,5 @@
+gcc -c maths.c -o maths.o
+ar rcs libmaths.a maths.o
+pwd
+gcc main2.c -L/Users/Andreev/Desktop/Works_for_school/Works_in_C -lmaths -o main2.exe
+.\main2.exe

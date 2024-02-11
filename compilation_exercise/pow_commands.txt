@@ -1,0 +1,2 @@
+gcc num_to_the_fourth_power.c -lm -o num_to_the_fourth_power.exe
+.\num_to_the_fourth_power.exe
