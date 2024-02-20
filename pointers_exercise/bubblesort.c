@@ -1,12 +1,5 @@
 #include <stdio.h>
 
-void swap(void *pa, void *pb)
-{
-  int temp = *(int *)pa;
-  *(int *)pa = *(int *)pb;
-  *(int *)pb = temp;
-}
-
 int compareasc(const void *const pa, const void *const pb)
 {
   if(*(int *)pa > *(int *)pb) return 1;
