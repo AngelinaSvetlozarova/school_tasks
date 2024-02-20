@@ -27,5 +27,5 @@ int main()
   int result_asc = compareasc(pa, pb);
   int result_desc = comparedesc(pa, pb);
   printf("compareasc: %d", result_asc);
-  printf("\ncomparedesc %d", result_desc);
+  printf("\ncomparedesc: %d", result_desc);
 }
