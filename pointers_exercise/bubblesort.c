@@ -45,7 +45,11 @@ void bubblesort(int array[], int len_array, int (*compare)(void *, void *), void
 int main()
 {
   int array[10] = {19, 0, 34, 12, 4, 6, 2, 13, 29, 100};
-  bubblesort(array, 10, &compareasc, &swap);
+  int (*compare)(const void *const, const void *const) = 0;
+  compare = &compareasc;
+  void (*swapelements)(void *, void *) = 0;
+  swapelements = &swap;
+  bubblesort(array, 10, compare, swapelements);
   printf("Compareasc:");
   for(int i=0; i<10; i++)
   {
@@ -53,7 +57,8 @@ int main()
   }
   printf("\n");
   printf("Comparedesc:");
-  bubblesort(array, 10, &comparedesc, &swap);
+  compare = &comparedesc;
+  bubblesort(array, 10, compare, swapelements);
   for(int i=0; i<10; i++)
   {
     printf(" %d", array[i]);
