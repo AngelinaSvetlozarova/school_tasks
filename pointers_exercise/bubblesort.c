@@ -27,7 +27,7 @@ int comparedesc(const void *const pa, const void *const pb)
   }
 }
 
-void bubblesort(int array[], int len_array, int (*compare)(void *, void *), void (*swapelements)(void *, void *))
+void bubblesort(int array[], int len_array, int (*compare)(const void *const, const void *const), void (*swapelements)(void *, void *))
 {
   for(int i=0; i < len_array - 1; i++)
   {
