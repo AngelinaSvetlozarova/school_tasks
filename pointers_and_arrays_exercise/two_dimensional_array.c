@@ -4,12 +4,11 @@
 
 void print(int array[][col], int row)
 {
-  int *p = &array[0][0];
   for(int i = 0; i < row; i++)
   {
     for(int j = 0; j < col; j++)
     {
-      printf(" %-5d", *(p+col*i+j));
+      printf(" %-5d", *(*(array + i)+j));
     }
     printf("\n");
   }
