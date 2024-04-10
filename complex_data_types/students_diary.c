@@ -38,8 +38,12 @@ int main()
                 gets(students[br-1].name);
               } 
               while (strlen(students[br-1].name)>15);
-              printf("\nEnter the number of the student [%d]:", br);
-              scanf("%d", &students[br-1].num);
+              do
+              {
+                printf("\nEnter the number of the student [%d]:", br);
+                scanf("%d", &students[br-1].num);
+              } 
+              while (students[br-1].num<1);  
               do
               {
                 printf("\nEnter the average grade of the student [%d]:", br);
